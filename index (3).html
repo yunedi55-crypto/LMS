@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal KTI SMA Kristen Sunodia 2025/2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        .custom-green { background-color: #22c55e; }
+        .custom-green-light { background-color: #dcfce7; }
+        .custom-yellow-light { background-color: #fefce8; }
+        .hover-green:hover { background-color: #16a34a; }
+        
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 250px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 0.5rem;
+            z-index: 50;
+        }
+        
+        .dropdown.show {
+            display: block;
+        }
+        
+        .menu-item:hover .dropdown {
+            display: block;
+        }
+        
+        .content-section {
+            display: none;
+        }
+        
+        .content-section.active {
+            display: block;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .researcher-icon {
+            animation: researcherPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes researcherPulse {
+            0%, 100% { 
+                transform: scale(1) rotate(0deg);
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+            }
+            50% { 
+                transform: scale(1.05) rotate(2deg);
+                box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+            }
+        }
+        
+        .researcher-icon svg {
+            animation: iconFloat 3s ease-in-out infinite;
+        }
+        
+        @keyframes iconFloat {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-2px) rotate(1deg); }
+            66% { transform: translateY(1px) rotate(-1deg); }
+        }
+        
+        .service-icon {
+            animation: serviceIconBounce 2s ease-in-out infinite;
+            transition: all 0.3s ease;
+        }
+        
+        .service-icon:hover {
+            animation: serviceIconSpin 1s linear infinite;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
+        }
+        
+        @keyframes serviceIconBounce {
+            0%, 100% { 
+                transform: translateY(0px) scale(1);
+                box-shadow: 0 4px 8px rgba(249, 115, 22, 0.2);
+            }
+            50% { 
+                transform: translateY(-8px) scale(1.05);
+                box-shadow: 0 8px 16px rgba(249, 115, 22, 0.3);
+            }
+        }
+        
+        @keyframes serviceIconSpin {
+            0% { transform: rotate(0deg) scale(1.1); }
+            100% { transform: rotate(360deg) scale(1.1); }
+        }
+        
+        .service-icon svg {
+            animation: iconPulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes iconPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-full">
+    <!-- Header -->
+    <header class="custom-green text-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center researcher-icon">
+                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1L13.5 2.5L16.17 5.17L10.5 10.84C10.18 10.64 9.82 10.5 9.43 10.5H6.57C5.5 10.5 4.59 11.17 4.25 12.15L2.1 18.32C1.74 19.38 2.44 20.5 3.57 20.5C4.26 20.5 4.88 20.05 5.08 19.38L6.94 13.5H9.43L12.5 16.57V21.5C12.5 22.33 13.17 23 14 23S15.5 22.33 15.5 21.5V16.43L18.5 13.43L21 9Z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-blue-900">SMA Kristen Sunodia</h1>
+                        <p class="text-blue-900 text-sm">Portal Karya Tulis Ilmiah</p>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <p class="text-sm text-blue-900">Tahun Pelajaran</p>
+                    <p class="font-semibold text-blue-900">2025/2026</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-6">
+            <div class="flex space-x-8">
+                <!-- Beranda -->
+                <div class="menu-item relative">
+                    <button onclick="showContent('beranda')" class="flex items-center px-4 py-4 text-gray-700 hover:text-green-600 font-medium transition-colors">
+                        <span>Beranda</span>
+                    </button>
+                </div>
+
+                <!-- Karya Tulis Ilmiah -->
+                <div class="menu-item relative">
+                    <button class="flex items-center px-4 py-4 text-gray-700 hover:text-green-600 font-medium transition-colors">
+                        <span>Karya Tulis Ilmiah</span>
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="dropdown">
+                        <div class="py-2">
+                            <button onclick="showContent('ketentuan')" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">Ketentuan Umum</button>
+                            <button onclick="showContent('panduan')" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">Panduan Penulisan KTI</button>
+                            <button onclick="showContent('rubrik-naskah')" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">Rubrik Penilaian Naskah KTI</button>
+                            <button onclick="showContent('rubrik-presentasi')" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">Rubrik Penilaian Presentasi KTI</button>
+                            <button onclick="showContent('bidang-kajian')" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">Bidang-Bidang Kajian KTI</button>
+                            <button onclick="showContent('format-bimbingan')" class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">Format Bimbingan / Konsultasi</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preview-Download File -->
+                <div class="menu-item relative">
+                    <button onclick="showContent('preview-download')" class="flex items-center px-4 py-4 text-gray-700 hover:text-green-600 font-medium transition-colors">
+                        <span>Preview-Download File</span>
+                    </button>
+                </div>
+
+                <!-- Helpdesk -->
+                <div class="menu-item relative">
+                    <button onclick="showContent('helpdesk')" class="flex items-center px-4 py-4 text-gray-700 hover:text-green-600 font-medium transition-colors">
+                        <span>Helpdesk</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+        <!-- Beranda -->
+        <div id="beranda" class="content-section active fade-in">
+            <div class="text-center mb-12">
+                <div class="custom-yellow-light rounded-2xl p-12 mb-8">
+                    <h1 class="text-3xl font-bold text-orange-600 mb-4">Selamat Datang di Platform Digital</h1>
+                    <h2 class="text-3xl font-bold text-orange-600 mb-4">Karya Tulis Ilmiah</h2>
+                </div>
+                
+
+                
+                <div class="grid md:grid-cols-3 gap-6 mt-8">
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 service-icon">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Panduan Lengkap</h3>
+                        <p class="text-gray-600 text-sm">Akses panduan penulisan KTI yang komprehensif dan mudah dipahami</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 service-icon">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Rubrik Penilaian</h3>
+                        <p class="text-gray-600 text-sm">Pahami kriteria penilaian naskah dan presentasi KTI</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4 service-icon">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Pada Jam Kerja atau Temui langsung Tim Helpdesk</h3>
+                        <p class="text-gray-600 text-sm">Dapatkan bantuan dan konsultasi melalui helpdesk kami</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ketentuan Umum -->
+        <div id="ketentuan" class="content-section">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">KETENTUAN UMUM KARYA TULIS ILMIAH</h2>
+                <h3 class="text-xl font-semibold text-green-600 mb-6 text-center">TAHUN PELAJARAN 2025/2026</h3>
+                
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-4 p-4 custom-green-light rounded-lg">
+                        <span class="flex-shrink-0 w-8 h-8 custom-green text-white rounded-full flex items-center justify-center font-bold text-sm">1</span>
+                        <p class="text-gray-700">Karya Tulis Ilmiah merupakan tugas akhir murid kelas 12</p>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4 p-4 custom-yellow-light rounded-lg">
+                        <span class="flex-shrink-0 w-8 h-8 custom-green text-white rounded-full flex items-center justify-center font-bold text-sm">2</span>
+                        <p class="text-gray-700">Karya Tulis Ilmiah menjadi salah satu syarat kelulusan murid kelas 12 dari SMA Kristen Sunodia</p>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4 p-4 custom-green-light rounded-lg">
+                        <span class="flex-shrink-0 w-8 h-8 custom-green text-white rounded-full flex items-center justify-center font-bold text-sm">3</span>
+                        <p class="text-gray-700">Karya Tulis Ilmiah dikerjakan oleh setiap murid kelas 12 secara individu</p>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4 p-4 custom-yellow-light rounded-lg">
+                        <span class="flex-shrink-0 w-8 h-8 custom-green text-white rounded-full flex items-center justify-center font-bold text-sm">4</span>
+                        <p class="text-gray-700">Penulisan Karya Tulis Ilmiah dilaksanakan di bawah bimbingan guru pembimbing yang telah ditetapkan</p>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4 p-4 custom-green-light rounded-lg">
+                        <span class="flex-shrink-0 w-8 h-8 custom-green text-white rounded-full flex items-center justify-center font-bold text-sm">5</span>
+                        <p class="text-gray-700">Setiap murid akan mendapat kesempatan untuk menjalankan undian untuk mendapatkan Bidang Kajian dalam Penulisan Karya Tulis Ilmiah dan selanjutnya menentukan judul secara mandiri dengan bimbingan guru pembimbing.</p>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4 p-4 custom-yellow-light rounded-lg">
+                        <span class="flex-shrink-0 w-8 h-8 custom-green text-white rounded-full flex items-center justify-center font-bold text-sm">6</span>
+                        <p class="text-gray-700">Setiap murid dibimbing oleh 2 (dua) orang guru pembimbing yang relevan dengan bidang kajian</p>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4 p-4 custom-green-light rounded-lg">
+                        <span class="flex-shrink-0 w-8 h-8 custom-green text-white rounded-full flex items-center justify-center font-bold text-sm">7</span>
+                        <p class="text-gray-700">Setiap murid wajib melaksanakan konsultasi/bimbingan penulisan Karya Tulis Ilmiah sesuai ketentuan yang ditetapkan sebagai syarat untuk maju ke tahap Presentasi Karya Tulis Ilmiah</p>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4 p-4 custom-yellow-light rounded-lg">
+                        <span class="flex-shrink-0 w-8 h-8 custom-green text-white rounded-full flex items-center justify-center font-bold text-sm">8</span>
+                        <p class="text-gray-700">Setiap murid dinyatakan menuntaskan tugas Karya Tulis Ilmiah apabila sudah melaksanakan tahap : Penulisan Karya Tulis Ilmiah, Pembimbingan/Konsultasi, melaksanakan Presentasi Karya Tulis Imiah, Revisi Akhir dan Penjilidan Naskah Karya Tulis Ilmiah.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panduan Penulisan KTI -->
+        <div id="panduan" class="content-section">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">PANDUAN PENULISAN KARYA TULIS ILMIAH (KTI)</h2>
+                <h3 class="text-xl font-semibold text-green-600 mb-8 text-center">SMA KRISTEN SUNODIA</h3>
+                
+                <div class="space-y-8">
+                    <!-- Pengertian KTI -->
+                    <div class="border-l-4 border-green-500 pl-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-4">A. Pengertian Karya Tulis Ilmiah (KTI)</h4>
+                        <p class="text-gray-700 leading-relaxed">Karya Tulis Ilmiah (KTI) adalah tulisan hasil pemikiran dan penelitian yang disusun secara sistematis, logis, dan ilmiah berdasarkan data dan fakta. KTI bertujuan untuk memecahkan suatu masalah dengan menggunakan metode ilmiah dan aturan penulisan yang baku. Bagi murid SMA, KTI berfungsi untuk melatih kemampuan meneliti, menganalisis, menulis, dan mempresentasikan hasil pemikiran secara ilmiah.</p>
+                    </div>
+                    
+                    <!-- Syarat KTI -->
+                    <div class="border-l-4 border-yellow-500 pl-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-4">B. Syarat Sebuah Tulisan Disebut KTI</h4>
+                        <p class="text-gray-700 mb-4">Sebuah tulisan dapat disebut KTI jika memenuhi syarat-syarat berikut:</p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <h5 class="font-semibold text-green-700 mb-2">1. Orisinal</h5>
+                                <p class="text-sm text-gray-600">Berisi gagasan atau hasil penelitian sendiri, bukan plagiat.</p>
+                            </div>
+                            <div class="bg-yellow-50 p-4 rounded-lg">
+                                <h5 class="font-semibold text-yellow-700 mb-2">2. Objektif</h5>
+                                <p class="text-sm text-gray-600">Berdasarkan data dan fakta, bukan emosi atau prasangka.</p>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <h5 class="font-semibold text-green-700 mb-2">3. Sistematis</h5>
+                                <p class="text-sm text-gray-600">Disusun dengan struktur yang runtut dan logis.</p>
+                            </div>
+                            <div class="bg-yellow-50 p-4 rounded-lg">
+                                <h5 class="font-semibold text-yellow-700 mb-2">4. Logis</h5>
+                                <p class="text-sm text-gray-600">Argumentasi dan penalarannya dapat diterima oleh akal sehat.</p>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <h5 class="font-semibold text-green-700 mb-2">5. Empiris</h5>
+                                <p class="text-sm text-gray-600">Berdasarkan pengalaman atau observasi yang dapat dibuktikan.</p>
+                            </div>
+                            <div class="bg-yellow-50 p-4 rounded-lg">
+                                <h5 class="font-semibold text-yellow-700 mb-2">6. Mengikuti Kaidah Kebahasaan</h5>
+                                <p class="text-sm text-gray-600">Menggunakan bahasa Indonesia yang baik dan benar, serta sesuai PUEBI</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Persiapan -->
+                    <div class="border-l-4 border-green-500 pl-6">
+                        <h4 class="text-xl font-bold text-gray-800 mb-4">C. Yang Harus Disiapkan Sebelum Menulis KTI</h4>
+                        <div class="space-y-4">
+                            <div class="custom-green-light p-4 rounded-lg">
+                                <h5 class="font-semibold text-gray-800 mb-2">1. Memilih Topik dan Masalah</h5>
+                                <p class="text-gray-700 text-sm">Pilih topik yang menarik, relevan dengan kehidupan sehari-hari, sesuai dengan minat, dan memungkinkan untuk diteliti.</p>
+                            </div>
+                            
+                            <div class="custom-yellow-light p-4 rounded-lg">
+                                <h5 class="font-semibold text-gray-800 mb-2">2. Melakukan Studi Pendahuluan</h5>
+                                <p class="text-gray-700 text-sm">Baca buku, jurnal, atau artikel terkait topik untuk memahami konteks permasalahan.</p>
+                            </div>
+                            
+                            <div class="custom-green-light p-4 rounded-lg">
+                                <h5 class="font-semibold text-gray-800 mb-2">3. Merumuskan Masalah</h5>
+                                <p class="text-gray-700 text-sm">Buat rumusan masalah yang spesifik, jelas, dan terukur. Biasanya diawali dengan kata tanya "Bagaimana", "Apa", "Mengapa".</p>
+                            </div>
+                            
+                            <div class="custom-yellow-light p-4 rounded-lg">
+                                <h5 class="font-semibold text-gray-800 mb-2">4. Menentukan Tujuan dan Manfaat Penelitian</h5>
+                                <p class="text-gray-700 text-sm">Tuliskan apa yang ingin dicapai dari penelitian dan siapa yang akan merasakan manfaatnya.</p>
+                            </div>
+                            
+                            <div class="custom-green-light p-4 rounded-lg">
+                                <h5 class="font-semibold text-gray-800 mb-2">5. Menyusun Kerangka Pemikiran</h5>
+                                <p class="text-gray-700 text-sm">Buat alur logika yang menghubungkan teori dengan permasalahan yang diteliti.</p>
+                            </div>
+                            
+                            <div class="custom-yellow-light p-4 rounded-lg">
+                                <h5 class="font-semibold text-gray-800 mb-2">6. Menyusun Hipotesis (jika ada)</h5>
+                                <p class="text-gray-700 text-sm">Dugaan sementara terhadap jawaban dari rumusan masalah. Hipotesis umumnya ada pada penelitian kuantitatif.</p>
+                            </div>
+                            
+                            <div class="custom-green-light p-4 rounded-lg">
+                                <h5 class="font-semibold text-gray-800 mb-2">7. Membuat Rancangan Metode Penelitian</h5>
+                                <p class="text-gray-700 text-sm">Tentukan metode yang akan digunakan (misalnya: survei, eksperimen, studi kasus), populasi dan sampel, teknik pengumpulan data (angket, wawancara, observasi), dan teknik analisis data.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Struktur Umum KTI -->
+                    <div class="border-l-4 border-yellow-500 pl-6 mt-8">
+                        <h4 class="text-xl font-bold text-gray-800 mb-4">STRUKTUR UMUM KTI DAN PENJELASAN</h4>
+                        <p class="text-gray-700 mb-6">Struktur KTI untuk siswa SMA umumnya terdiri dari tiga bagian utama: Awal, Inti, dan Akhir.</p>
+                        
+                        <!-- Bagian Awal -->
+                        <div class="mb-8">
+                            <h5 class="text-lg font-bold text-green-600 mb-4">BAGIAN AWAL</h5>
+                            
+                            <!-- Halaman Sampul -->
+                            <div class="bg-white border border-gray-200 rounded-lg p-6 mb-6">
+                                <h6 class="font-semibold text-gray-800 mb-3">1. Halaman Sampul (Cover)</h6>
+                                <p class="text-gray-700 text-sm mb-4">Berisi judul, logo sekolah, tujuan penulisan, nama dan NISN penulis, serta nama sekolah, kota dan tahun.</p>
+                                
+                                <div class="bg-gray-50 p-4 rounded border text-center text-sm">
+                                    <div class="space-y-2">
+                                        <p class="font-bold">KARYA TULIS ILMIAH</p>
+                                        <p class="font-semibold">PEMANFAATAN DAUN KELOR (MORINGA OLEIFERA)</p>
+                                        <p class="font-semibold">SEBAGAI ALTERNATIF PUPUK ORGANIK CAIR RAMAH LINGKUNGAN</p>
+                                        <div class="my-4">
+                                            <div class="w-16 h-16 bg-green-200 rounded-full mx-auto flex items-center justify-center">
+                                                <span class="text-xs">Logo Sekolah</span>
+                                            </div>
+                                        </div>
+                                        <p class="text-xs">Sebagai salah satu syarat kelulusan</p>
+                                        <p class="font-semibold mt-4">Disusun oleh:</p>
+                                        <p class="font-semibold">NAMA SISWA</p>
+                                        <p class="text-xs">NIS: 123…………</p>
+                                        <div class="mt-6">
+                                            <p class="font-semibold">SMA KRISTEN SUNODIA</p>
+                                            <p class="font-semibold">SAMARINDA</p>
+                                            <p class="font-semibold">202…..</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Halaman Pengesahan -->
+                            <div class="bg-white border border-gray-200 rounded-lg p-6 mb-6">
+                                <h6 class="font-semibold text-gray-800 mb-3">2. Halaman Pengesahan</h6>
+                                <p class="text-gray-700 text-sm mb-4">Berisi persetujuan dari guru pembimbing dan kepala sekolah bahwa KTI telah disahkan. Ditandatangani oleh pihak yang bersangkutan.</p>
+                                
+                                <div class="bg-gray-50 p-4 rounded border text-sm">
+                                    <div class="text-center mb-4">
+                                        <p class="font-bold text-lg">LEMBAR PENGESAHAN</p>
+                                    </div>
+                                    <p class="mb-2">Karya Tulis Ilmiah dengan judul: "Pemanfaatan Daun Kelor (Moringa oleifera) sebagai Alternatif Pupuk Organik Cair Ramah Lingkungan"</p>
+                                    <div class="mb-4">
+                                        <p>Disusun oleh:</p>
+                                        <p>Nama : NAMA SISWA</p>
+                                        <p>NIS  : 123456789</p>
+                                        <p>Kelas: XII-2</p>
+                                    </div>
+                                    <p class="mb-4">Telah diperiksa dan disetujui sebagai salah satu syarat kelulusan SMA Kristen Sunodia Tahun Pelajaran 2025/2026.</p>
+                                    <p class="mb-6">Dinyatakan Sah pada tanggal …………………….</p>
+                                    <div class="flex justify-between">
+                                        <div class="text-center">
+                                            <p>Kepala Sekolah,</p>
+                                            <div class="mt-12">
+                                                <p>(__________________)</p>
+                                                <p class="text-xs">NIPY. ………………………….</p>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <p>Guru Pembimbing,</p>
+                                            <div class="mt-12">
+                                                <p>(__________________)</p>
+                                                <p class="text-xs">NIPY. ………………………….</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Kata Pengantar -->
+                            <div class="bg-white border border-gray-200 rounded-lg p-6 mb-6">
+                                <h6 class="font-semibold text-gray-800 mb-3">3. Kata Pengantar</h6>
+                                <p class="text-gray-700 text-sm mb-4">Berisi ucapan syukur, penjelasan singkat tentang tujuan penulisan KTI, ucapan terima kasih kepada pihak yang telah membantu, dan harapan penulis. Ditutup dengan tempat, tanggal, dan nama penulis.</p>
+                                
+                                <div class="bg-yellow-50 p-4 rounded border">
+                                    <p class="text-sm font-semibold text-yellow-800 mb-2">Contoh: (jangan copy paste contoh)</p>
+                                    <div class="text-xs text-gray-600 space-y-2">
+                                        <p class="font-bold text-center">KATA PENGANTAR</p>
+                                        <p>Puji syukur penulis panjatkan ke hadirat Tuhan Yang Maha Esa, karena berkat rahmat dan karunia-Nya, penulis dapat menyelesaikan Karya Tulis Ilmiah dengan judul "Pemanfaatan Limbah Kulit Pisang sebagai Bahan Baku Pembuatan Bioplastik" dengan baik.</p>
+                                        <p>Karya tulis ini disusun untuk memenuhi salah satu syarat kelulusan pada SMA Negeri 1 Maju Jaya. Penulis menyadari bahwa tanpa bimbingan dan dukungan dari berbagai pihak, karya tulis ini tidak akan terselesaikan dengan baik. Untuk itu, penulis mengucapkan terima kasih yang sebesar-besarnya kepada:</p>
+                                        <p>1. Bapak Drs. Budi Santoso, M.Pd., selaku Kepala SMA Negeri 1 Maju Jaya.</p>
+                                        <p>2. Ibu Siti Aminah, S.Pd., selaku guru pembimbing yang telah memberikan bimbingan, motivasi, dan saran yang sangat berharga.</p>
+                                        <p>3. Kedua orang tua penulis yang selalu memberikan dukungan moril dan materiel.</p>
+                                        <p>4. Teman-teman kelas XII-2 yang telah memberikan semangat.</p>
+                                        <p>Penulis menyadari bahwa karya tulis ini masih jauh dari kata sempurna. Oleh karena itu, kritik dan saran yang membangun sangat penulis harapkan untuk kesempurnaan karya tulis ini. Semoga karya tulis ini dapat bermanfaat bagi pembaca.</p>
+                                        <div class="text-right mt-4">
+                                            <p>Maju Jaya, 20 Mei 20…….</p>
+                                            <p class="mt-8">Penulis,</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Abstrak -->
+                            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                                <h6 class="font-semibold text-gray-800 mb-3">4. Abstrak</h6>
+                                <p class="text-gray-700 text-sm mb-4">Abstrak adalah ringkasan singkat (100-250 kata) dari keseluruhan KTI yang memuat latar belakang, tujuan, metode, hasil, dan kesimpulan. Ditulis dalam satu paragraf padat. Cantumkan juga kata kunci (keywords).</p>
+                                
+                                <div class="bg-green-50 p-4 rounded mb-4">
+                                    <p class="font-semibold text-green-800 mb-2">Yang harus dilakukan:</p>
+                                    <div class="text-sm text-gray-700 space-y-1">
+                                        <p>✓ Tulis dalam satu paragraf.</p>
+                                        <p>✓ Jelaskan masalah dan tujuan secara singkat.</p>
+                                        <p>✓ Sebutkan metode penelitian yang digunakan.</p>
+                                        <p>✓ Sajikan temuan atau hasil utama.</p>
+                                        <p>✓ Berikan kesimpulan singkat.</p>
+                                        <p>✓ Gunakan kata kunci yang relevan.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-yellow-50 p-4 rounded border">
+                                    <p class="text-sm font-semibold text-yellow-800 mb-2">Contoh:</p>
+                                    <div class="text-xs text-gray-700 space-y-2">
+                                        <p class="font-bold text-center">ABSTRAK</p>
+                                        <p class="text-justify">Plastik konvensional merupakan masalah lingkungan utama karena sulit terurai. Penelitian ini bertujuan untuk menciptakan bioplastik yang ramah lingkungan dari limbah kulit pisang kepok. Metode yang digunakan adalah eksperimen laboratorium dengan variasi konsentrasi gliserol (10%, 15%, 20%) sebagai plasticizer. Hasil pengujian menunjukkan bahwa bioplastik dengan konsentrasi gliserol 15% menghasilkan sifat mekanik terbaik dengan tensile strength 4,2 MPa dan elongasi 12%. Bioplastik ini juga mulai terurai secara alami dalam tanah setelah 14 hari. Simpulan penelitian ini adalah kulit pisang kepok berpotensi sebagai bahan baku bioplastik, dengan konsentrasi gliserol 15% menghasilkan karakteristik optimal. Bioplastik ini diharapkan dapat menjadi alternatif pengganti plastik konvensional.</p>
+                                        <p class="font-semibold">Kata Kunci : Bioplastik, Limbah Kulit Pisang, Gliserol, Ramah Lingkungan.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Daftar Isi -->
+                            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                                <h6 class="font-semibold text-gray-800 mb-3">5. Daftar Isi</h6>
+                                <p class="text-gray-700 text-sm mb-4">Memuat semua judul dan subjudul dalam KTI beserta nomor halamannya.</p>
+                                
+                                <div class="bg-gray-50 p-4 rounded border text-sm">
+                                    <p class="font-bold text-center mb-4">DAFTAR ISI</p>
+                                    <div class="space-y-1 text-xs">
+                                        <div class="flex justify-between">
+                                            <span>Halaman Sampul</span>
+                                            <span>i</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span>Halaman Pengesahan</span>
+                                            <span>ii</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span>Kata Pengantar</span>
+                                            <span>iii</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span>Abstrak</span>
+                                            <span>iv</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span>Daftar Isi</span>
+                                            <span>v</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span>Daftar Gambar (jika ada)</span>
+                                            <span>vi</span>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <span>Daftar Tabel (jika ada)</span>
+                                            <span>vii</span>
+                                        </div>
+                                        <div class="mt-3 font-semibold">
+                                            <p>BAB I PENDAHULUAN</p>
+                                        </div>
+                                        <div class="ml-4 space-y-1">
+                                            <div class="flex justify-between">
+                                                <span>1.1 Latar Belakang</span>
+                                                <span>1</span>
+                                            </div>
+                                            <div class="flex justify-between">
+                                                <span>1.2 Rumusan Masalah</span>
+                                                <span>3</span>
+                                            </div>
+                                            <div class="flex justify-between">
+                                                <span>1.3 Tujuan Penelitian</span>
+                                                <span>3</span>
+                                            </div>
+                                            <div class="flex justify-between">
+                                                <span>1.4 Manfaat Penelitian</span>
+                                                <span>4</span>
+                                            </div>
+                                        </div>
+                                        <p class="text-center mt-2">... dan seterusnya.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Bagian Inti -->
+                        <div class="mb-8">
+                            <h5 class="text-lg font-bold text-green-600 mb-4">BAGIAN INTI</h5>
+                            
+                            <!-- BAB I: PENDAHULUAN -->
+                            <div class="bg-white border border-gray-200 rounded-lg p-6 mb-6">
+                                <h6 class="font-semibold text-gray-800 mb-4">BAB I : PENDAHULUAN</h6>
+                                
+                                <!-- 1.1 Latar Belakang -->
+                                <div class="mb-6">
+                                    <h6 class="font-semibold text-green-700 mb-2">1.1 Latar Belakang</h6>
+                                    <p class="text-gray-700 text-sm">Jelaskan alasan logis dan faktual mengapa topik ini penting untuk diteliti. Tunjukkan adanya kesenjangan antara harapan dan kenyataan, atau masalah yang perlu dipecahkan. Gunakan data pendukung (statistik, hasil penelitian sebelumnya, fenomena aktual) untuk memperkuat argumen. Alur penulisan dari umum ke khusus.</p>
+                                </div>
+                                
+                                <!-- 1.2 Rumusan Masalah -->
+                                <div class="mb-6">
+                                    <h6 class="font-semibold text-green-700 mb-2">1.2 Rumusan Masalah</h6>
+                                    <p class="text-gray-700 text-sm mb-3">Buat dalam bentuk pertanyaan yang spesifik dan terarah. Pertanyaan ini nantinya akan dijawab dalam pembahasan.</p>
+                                    <div class="bg-yellow-50 p-3 rounded text-xs">
+                                        <p class="font-semibold mb-2">Contoh:</p>
+                                        <p>1. Bagaimana pengaruh variasi konsentrasi gliserol terhadap tensile strength bioplastik dari kulit pisang kepok?</p>
+                                        <p>2. Bagaimana tingkat biodegradabilitas bioplastik dari kulit pisang kepok?</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- 1.3 Tujuan Penelitian -->
+                                <div class="mb-6">
+                                    <h6 class="font-semibold text-green-700 mb-2">1.3 Tujuan Penelitian</h6>
+                                    <p class="text-gray-700 text-sm mb-3">Jawaban dari rumusan masalah, tetapi dalam bentuk pernyataan.</p>
+                                    <div class="bg-green-50 p-3 rounded text-xs">
+                                        <p class="font-semibold mb-2">Contoh:</p>
+                                        <p>1. Menganalisis pengaruh variasi konsentrasi gliserol terhadap tensile strength bioplastik dari kulit pisang kepok.</p>
+                                        <p>2. Mengetahui tingkat biodegradabilitas bioplastik dari kulit pisang kepok.</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- 1.4 Manfaat Penelitian -->
+                                <div>
+                                    <h6 class="font-semibold text-green-700 mb-2">1.4 Manfaat Penelitian</h6>
+                                    <p class="text-gray-700 text-sm mb-3">Jelaskan kontribusi penelitian ini, baik secara teoritis (bagi ilmu pengetahuan) maupun praktis (bagi masyarakat, sekolah, dll.).</p>
+                                    <div class="bg-yellow-50 p-3 rounded text-xs">
+                                        <p class="font-semibold mb-2">Contoh:</p>
+                                        <p class="mb-2"><strong>1. Manfaat Teoritis :</strong> dengan inovasi pupuk ramah lingkungan dapat memperkaya khasanah keilmuan untuk mendukung bidang pertanian</p>
+                                        <p><strong>2. Manfaat Praktis :</strong></p>
+                                        <div class="ml-4 space-y-1">
+                                            <p>a. Bagi Peneliti: Menambah wawasan tentang proses pembuatan bioplastik.</p>
+                                            <p>b. Bagi Masyarakat: Memberikan alternatif pemanfaatan limbah kulit pisang yang bernilai ekonomi.</p>
+                                            <p>c. Bagi Lingkungan: Menyediakan solusi atas masalah sampah plastik.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- BAB II: KAJIAN PUSTAKA -->
+                            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                                <h6 class="font-semibold text-gray-800 mb-4">BAB II : KAJIAN PUSTAKA / TINJAUAN PUSTAKA</h6>
+                                <p class="text-gray-700 text-sm mb-4">Bab ini berisi teori-teori, konsep, dan hasil penelitian terdahulu yang relevan dengan topik KTI. Fungsinya sebagai landasan teoritis untuk analisis dan pembahasan.</p>
+                                
+                                <div class="bg-green-50 p-4 rounded mb-4">
+                                    <p class="font-semibold text-green-800 mb-2">Yang harus dilakukan:</p>
+                                    <div class="text-sm text-gray-700 space-y-1">
+                                        <p>✓ Cari sumber yang kredibel (buku teks, jurnal, artikel ilmiah).</p>
+                                        <p>✓ Jelaskan teori-teori inti yang mendukung penelitian.</p>
+                                        <p>✓ Kutip dengan benar untuk menghindari plagiarisme.</p>
+                                        <p>✓ Jangan hanya menumpuk kutipan, tetapi hubungkan antar-teori.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-yellow-50 p-4 rounded border">
+                                    <p class="font-semibold text-yellow-800 mb-3">Contoh Cara Mengutip dalam Teks (In-Text Citation):</p>
+                                    
+                                    <div class="mb-4">
+                                        <p class="font-semibold text-gray-800 mb-2">Kutipan Langsung : Jika mengutip perkataan persis dari penulis.</p>
+                                        <div class="bg-white p-3 rounded text-xs space-y-2">
+                                            <p>Menurut Suryanto (2020, hlm. 45), "Bioplastik adalah polimer plastik yang berasal dari sumber terbarukan."</p>
+                                            <p class="text-center font-semibold">Atau:</p>
+                                            <p>"Bioplastik adalah polimer plastik yang berasal dari sumber terbarukan" (Suryanto, 2020, hlm. 45).</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div>
+                                        <p class="font-semibold text-gray-800 mb-2">Kutipan Tidak Langsung (Parafrase): Menyatakan kembali ide penulis dengan bahasa sendiri.</p>
+                                        <div class="bg-white p-3 rounded text-xs">
+                                            <p>Pati yang terkandung dalam kulit pisang dapat dijadikan sebagai matriks pembentuk bioplastik karena sifatnya yang termoplastik (Widodo, 2019).</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- BAB III: METODE PENELITIAN -->
+                            <div class="bg-white border border-gray-200 rounded-lg p-6 mb-6">
+                                <h6 class="font-semibold text-gray-800 mb-4">BAB III: METODE PENELITIAN</h6>
+                                <p class="text-gray-700 text-sm mb-4">Jelaskan secara rinci bagaimana penelitian ini dilakukan sehingga orang lain dapat mengulanginya.</p>
+                                
+                                <div class="space-y-3 text-sm text-gray-700">
+                                    <p><strong>3.1</strong> Jenis dan Rancangan Penelitian (Misal: Eksperimen)</p>
+                                    <p><strong>3.2</strong> Tempat dan Waktu Penelitian</p>
+                                    <p><strong>3.3</strong> Populasi dan Sampel (Jika menggunakan responden)</p>
+                                    <p><strong>3.4</strong> Variabel Penelitian (Untuk eksperimen: variabel bebas, terikat, kontrol)</p>
+                                    <p><strong>3.5</strong> Alat dan Bahan</p>
+                                    <p><strong>3.6</strong> Prosedur Kerja / Teknik Pengumpulan Data (Jelaskan langkah-langkah kerja secara berurutan)</p>
+                                    <p><strong>3.7</strong> Teknik Analisis Data (Misal: analisis deskriptif kualitatif, analisis statistik sederhana)</p>
+                                </div>
+                            </div>
+                            
+                            <!-- BAB IV: HASIL DAN PEMBAHASAN -->
+                            <div class="bg-white border border-gray-200 rounded-lg p-6 mb-6">
+                                <h6 class="font-semibold text-gray-800 mb-4">BAB IV: HASIL DAN PEMBAHASAN</h6>
+                                <p class="text-gray-700 text-sm mb-4">Ini adalah inti dari KTI. Sajikan data yang telah dikumpulkan, lalu analisis dan interpretasikan.</p>
+                                
+                                <!-- 4.1 Hasil Penelitian -->
+                                <div class="mb-6">
+                                    <h6 class="font-semibold text-green-700 mb-2">4.1 Hasil Penelitian</h6>
+                                    <p class="text-gray-700 text-sm mb-3">Sajikan data dalam bentuk tabel, grafik, atau deskripsi. Jangan beri komentar di bagian ini.</p>
+                                    
+                                    <div class="bg-gray-50 p-4 rounded">
+                                        <p class="font-semibold text-gray-800 mb-3">Contoh Tabel:</p>
+                                        <div class="overflow-x-auto">
+                                            <table class="w-full text-xs border-collapse border border-gray-300">
+                                                <caption class="text-sm font-semibold mb-2">Tabel 4.1 Hasil Pengujian Tensile Strength Bioplastik</caption>
+                                                <thead>
+                                                    <tr class="bg-gray-100">
+                                                        <th class="border border-gray-300 px-3 py-2 text-left">Konsentrasi Gliserol</th>
+                                                        <th class="border border-gray-300 px-3 py-2 text-left">Tensile Strength (MPa)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="border border-gray-300 px-3 py-2">10%</td>
+                                                        <td class="border border-gray-300 px-3 py-2">5,1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="border border-gray-300 px-3 py-2">15%</td>
+                                                        <td class="border border-gray-300 px-3 py-2">4,2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="border border-gray-300 px-3 py-2">20%</td>
+                                                        <td class="border border-gray-300 px-3 py-2">2,8</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- 4.2 Pembahasan -->
+                                <div>
+                                    <h6 class="font-semibold text-green-700 mb-2">4.2 Pembahasan</h6>
+                                    <p class="text-gray-700 text-sm mb-3">Ini adalah bagian terpenting. Jelaskan makna dari data yang ditemukan. Jawab rumusan masalah di sini. Bandingkan hasil temuan dengan teori yang ada di Bab II. Mengapa hasilnya bisa seperti itu? Apa implikasinya?</p>
+                                    
+                                    <div class="bg-yellow-50 p-3 rounded text-xs">
+                                        <p class="font-semibold mb-2">Contoh:</p>
+                                        <p>Berdasarkan Tabel 4.1, terlihat bahwa semakin tinggi konsentrasi gliserol, tensile strength bioplastik justru menurun. Hal ini sesuai dengan teori yang dikemukakan oleh Suryanto (2020) bahwa gliserol berfungsi sebagai plasticizer yang... [dan seterusnya, jelaskan secara mendalam].</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- BAB V: PENUTUP -->
+                            <div class="bg-white border border-gray-200 rounded-lg p-6 mb-6">
+                                <h6 class="font-semibold text-gray-800 mb-4">BAB V: PENUTUP</h6>
+                                
+                                <!-- 5.1 Simpulan -->
+                                <div class="mb-6">
+                                    <h6 class="font-semibold text-green-700 mb-2">5.1 Simpulan</h6>
+                                    <p class="text-gray-700 text-sm mb-3">Berisi rangkuman jawaban dari tujuan penelitian. Ditulis secara singkat, padat, dan jelas, sesuai dengan urutan tujuan penelitian.</p>
+                                    
+                                    <div class="bg-green-50 p-3 rounded text-xs">
+                                        <p class="font-semibold mb-2">Contoh:</p>
+                                        <p>1. Konsentrasi gliserol berpengaruh signifikan terhadap tensile strength bioplastik kulit pisang. Konsentrasi 10% menghasilkan tensile strength tertinggi.</p>
+                                        <p>2. Bioplastik yang dihasilkan terbukti biodegradable karena menunjukkan tanda-tanda pelapukan setelah 14 hari ditanam dalam tanah.</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- 5.2 Saran -->
+                                <div>
+                                    <h6 class="font-semibold text-green-700 mb-2">5.2 Saran</h6>
+                                    <p class="text-gray-700 text-sm mb-3">Berisi rekomendasi yang ditujukan kepada pihak-pihak terkait berdasarkan keterbatasan dan temuan penelitian. Saran harus operasional (dapat dilakukan).</p>
+                                    
+                                    <div class="bg-yellow-50 p-3 rounded text-xs">
+                                        <p class="font-semibold mb-2">Contoh:</p>
+                                        <p>1. Bagi Peneliti Selanjutnya: Disarankan untuk meneliti penambahan bahan penguat (reinforcement) seperti serat alam untuk meningkatkan tensile strength bioplastik.</p>
+                                        <p>2. Bagi Sekolah: Diharapkan sekolah dapat mendukung penelitian lanjutan dengan menyediakan fasilitas laboratorium yang memadai.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Bagian Akhir -->
+                        <div class="mb-8">
+                            <h5 class="text-lg font-bold text-green-600 mb-4">BAGIAN AKHIR</h5>
+                            
+                            <!-- Daftar Pustaka -->
+                            <div class="bg-white border border-gray-200 rounded-lg p-6">
+                                <h6 class="font-semibold text-gray-800 mb-4">1. Daftar Pustaka</h6>
+                                <p class="text-gray-700 text-sm mb-4">Berisi semua sumber yang dikutip dalam KTI. Disusun secara alfabetis tanpa nomor.</p>
+                                
+                                <div class="space-y-4">
+                                    <!-- Sumber dari Buku -->
+                                    <div class="bg-green-50 p-4 rounded">
+                                        <h6 class="font-semibold text-green-800 mb-2">Sumber dari Buku:</h6>
+                                        <p class="text-xs text-gray-700 mb-2">Nama Belakang, Inisial Nama Depan. (Tahun Terbit). <em>Judul Buku (cetak miring)</em>. Kota Penerbit: Nama Penerbit.</p>
+                                        <div class="bg-white p-2 rounded text-xs">
+                                            <p><strong>Contoh:</strong> Suryanto, T. (2020). <em>Teknologi Bioplastik</em>. Bandung: Penerbit Alfabeta.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Sumber dari Jurnal Online -->
+                                    <div class="bg-yellow-50 p-4 rounded">
+                                        <h6 class="font-semibold text-yellow-800 mb-2">Sumber dari Jurnal Online:</h6>
+                                        <p class="text-xs text-gray-700 mb-2">Nama Belakang, Inisial Nama Depan. (Tahun). Judul Artikel. <em>Nama Jurnal (cetak miring)</em>, Volume(Nomor), halaman. DOI atau URL</p>
+                                        <div class="bg-white p-2 rounded text-xs">
+                                            <p><strong>Contoh:</strong></p>
+                                            <p>Widodo, A., & Pratama, R. (2019). Pemanfaatan Pati Kulit Pisang untuk Pembuatan Bioplastik. <em>Jurnal Ilmu Lingkungan</em>, 15(2), 45-52. https://doi.org/10.1234/jil.v15i2.12345</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Sumber dari Website -->
+                                    <div class="bg-green-50 p-4 rounded">
+                                        <h6 class="font-semibold text-green-800 mb-2">Sumber dari Website/Artikel Online:</h6>
+                                        <p class="text-xs text-gray-700 mb-2">Nama Penulis atau Institusi. (Tahun, Tanggal Bulan). Judul Artikel. <em>Nama Website</em>. URL</p>
+                                        <div class="bg-white p-2 rounded text-xs">
+                                            <p><strong>Contoh:</strong></p>
+                                            <p>Kementerian Lingkungan Hidup dan Kehutanan. (2023, 15 Februari). Indonesia Hasilkan 64 Juta Ton Sampah per Tahun. <em>KLHK.go.id</em>. https://www.menlhk.go.id/berita-64-juta-ton-sampah</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Sumber dari Skripsi/Tesis -->
+                                    <div class="bg-yellow-50 p-4 rounded">
+                                        <h6 class="font-semibold text-yellow-800 mb-2">Sumber dari Skripsi/Tesis:</h6>
+                                        <p class="text-xs text-gray-700 mb-2">Nama Belakang, Inisial Nama Depan. (Tahun). <em>Judul Skripsi/Tesis (cetak miring)</em> [Jenis Karya]. Nama Perguruan Tinggi.</p>
+                                        <div class="bg-white p-2 rounded text-xs">
+                                            <p><strong>Contoh:</strong></p>
+                                            <p>Putri, R. (2023). <em>Pengaruh Suhu Ekstraksi terhadap Rendemen Pati dari Limbah Kulit Pisang</em> [Skripsi]. Universitas Indonesia.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Lampiran -->
+                                <div class="bg-white border border-gray-200 rounded-lg p-6 mt-6">
+                                    <h6 class="font-semibold text-gray-800 mb-3">2. Lampiran (jika ada)</h6>
+                                    <p class="text-gray-700 text-sm">Berisi dokumen pendukung seperti foto-foto proses penelitian, data mentah, surat ijin penelitian, atau instrumen penelitian (kuesioner).</p>
+                                </div>
+                                
+                                <!-- Catatan Penting -->
+                                <div class="bg-red-50 border border-red-200 rounded-lg p-6 mt-6">
+                                    <h6 class="font-semibold text-red-800 mb-4">Catatan Penting:</h6>
+                                    <div class="space-y-2 text-sm text-gray-700">
+                                        <p class="flex items-start space-x-2">
+                                            <span class="text-green-600 font-bold">√</span>
+                                            <span>Penulisan KTI menggunakan kertas ukuran A4, font yang formal (Times New Roman, 12 pt), spasi 1.5, dan margin normal (4-3-3-3 cm).</span>
+                                        </p>
+                                        <p class="flex items-start space-x-2">
+                                            <span class="text-green-600 font-bold">√</span>
+                                            <span>Lakukan penyuntingan (editing) untuk memeriksa kesalahan ketik dan tata bahasa.</span>
+                                        </p>
+                                        <p class="flex items-start space-x-2">
+                                            <span class="text-green-600 font-bold">√</span>
+                                            <span><strong class="text-red-700">JAUHI PLAGIARISME</strong> Selalu cantumkan sumber ketika mengutip ide orang lain.</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Placeholder sections for other menus -->
+        <div id="rubrik-naskah" class="content-section">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">RUBRIK PENILAIAN KARYA TULIS ILMIAH</h2>
+                <h3 class="text-xl font-semibold text-green-600 mb-8 text-center">SMA KRISTEN SUNODIA</h3>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse border border-gray-300 text-sm">
+                        <thead>
+                            <tr class="bg-green-600 text-white">
+                                <th class="border border-gray-300 px-4 py-3 text-center font-semibold">No.</th>
+                                <th class="border border-gray-300 px-4 py-3 text-center font-semibold">Aspek Penilaian</th>
+                                <th class="border border-gray-300 px-4 py-3 text-center font-semibold">Kriteria Penilaian</th>
+                                <th class="border border-gray-300 px-4 py-3 text-center font-semibold">Indikator Penilaian (Skor 1–4)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 px-4 py-3 text-center font-semibold">1</td>
+                                <td class="border border-gray-300 px-4 py-3 font-semibold text-green-700">Judul dan Permasalahan</td>
+                                <td class="border border-gray-300 px-4 py-3">Ketepatan judul, kejelasan dan relevansi masalah dengan bidang ilmu</td>
+                                <td class="border border-gray-300 px-4 py-3">
+                                    <div class="space-y-2 text-xs">
+                                        <p><span class="font-bold text-green-600">4:</span> Judul menarik, jelas, dan relevan dengan isi; masalah aktual dan teridentifikasi dengan baik.</p>
+                                        <p><span class="font-bold text-blue-600">3:</span> Judul cukup jelas, masalah relevan namun kurang spesifik.</p>
+                                        <p><span class="font-bold text-yellow-600">2:</span> Judul atau masalah kurang fokus.</p>
+                                        <p><span class="font-bold text-red-600">1:</span> Judul dan masalah tidak jelas atau tidak sesuai.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 px-4 py-3 text-center font-semibold">2</td>
+                                <td class="border border-gray-300 px-4 py-3 font-semibold text-green-700">Rumusan Masalah dan Tujuan</td>
+                                <td class="border border-gray-300 px-4 py-3">Kejelasan rumusan masalah dan kesesuaian tujuan penelitian</td>
+                                <td class="border border-gray-300 px-4 py-3">
+                                    <div class="space-y-2 text-xs">
+                                        <p><span class="font-bold text-green-600">4:</span> Rumusan masalah tajam dan tujuan sangat jelas.</p>
+                                        <p><span class="font-bold text-blue-600">3:</span> Rumusan masalah cukup jelas dan tujuan sesuai.</p>
+                                        <p><span class="font-bold text-yellow-600">2:</span> Rumusan masalah umum, tujuan kurang fokus.</p>
+                                        <p><span class="font-bold text-red-600">1:</span> Rumusan masalah tidak jelas.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 px-4 py-3 text-center font-semibold">3</td>
+                                <td class="border border-gray-300 px-4 py-3 font-semibold text-green-700">Kajian Pustaka / Tinjauan Teori</td>
+                                <td class="border border-gray-300 px-4 py-3">Kelengkapan teori, relevansi sumber, dan pemahaman konsep</td>
+                                <td class="border border-gray-300 px-4 py-3">
+                                    <div class="space-y-2 text-xs">
+                                        <p><span class="font-bold text-green-600">4:</span> Sumber lengkap, mutakhir, dan relevan; pemahaman sangat baik</p>
+                                        <p><span class="font-bold text-blue-600">3:</span> Sumber cukup lengkap dan relevan.</p>
+                                        <p><span class="font-bold text-yellow-600">2:</span> Sumber terbatas dan sebagian tidak relevan.</p>
+                                        <p><span class="font-bold text-red-600">1:</span> Sumber minim/tidak relevan.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 px-4 py-3 text-center font-semibold">4</td>
+                                <td class="border border-gray-300 px-4 py-3 font-semibold text-green-700">Metodologi Penelitian</td>
+                                <td class="border border-gray-300 px-4 py-3">Kesesuaian metode, kejelasan langkah, dan instrumen penelitian</td>
+                                <td class="border border-gray-300 px-4 py-3">
+                                    <div class="space-y-2 text-xs">
+                                        <p><span class="font-bold text-green-600">4:</span> Metode sangat tepat, langkah jelas, instrumen valid.</p>
+                                        <p><span class="font-bold text-blue-600">3:</span> Metode cukup tepat, langkah cukup jelas.</p>
+                                        <p><span class="font-bold text-yellow-600">2:</span> Metode kurang sesuai, langkah kurang rinci.</p>
+                                        <p><span class="font-bold text-red-600">1:</span> Metode tidak tepat atau tidak dijelaskan.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 px-4 py-3 text-center font-semibold">5</td>
+                                <td class="border border-gray-300 px-4 py-3 font-semibold text-green-700">Hasil dan Pembahasan</td>
+                                <td class="border border-gray-300 px-4 py-3">Kejelasan data, analisis logis, dan keterkaitan dengan teori</td>
+                                <td class="border border-gray-300 px-4 py-3">
+                                    <div class="space-y-2 text-xs">
+                                        <p><span class="font-bold text-green-600">4:</span> Data lengkap, analisis tajam, dan sesuai teori.</p>
+                                        <p><span class="font-bold text-blue-600">3:</span> Data cukup lengkap dan analisis baik.</p>
+                                        <p><span class="font-bold text-yellow-600">2:</span> Data kurang lengkap, analisis lemah.</p>
+                                        <p><span class="font-bold text-red-600">1:</span> Data/analisis tidak jelas.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 px-4 py-3 text-center font-semibold">6</td>
+                                <td class="border border-gray-300 px-4 py-3 font-semibold text-green-700">Kesimpulan dan Saran</td>
+                                <td class="border border-gray-300 px-4 py-3">Relevansi dengan hasil dan kejelasan saran</td>
+                                <td class="border border-gray-300 px-4 py-3">
+                                    <div class="space-y-2 text-xs">
+                                        <p><span class="font-bold text-green-600">4:</span> Kesimpulan logis dan sesuai hasil, saran aplikatif.</p>
+                                        <p><span class="font-bold text-blue-600">3:</span> Kesimpulan cukup sesuai, saran relevan.</p>
+                                        <p><span class="font-bold text-yellow-600">2:</span> Kesimpulan umum, saran tidak jelas.</p>
+                                        <p><span class="font-bold text-red-600">1:</span> Kesimpulan tidak sesuai hasil.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 px-4 py-3 text-center font-semibold">7</td>
+                                <td class="border border-gray-300 px-4 py-3 font-semibold text-green-700">Sistematika dan Kebahasaan</td>
+                                <td class="border border-gray-300 px-4 py-3">Struktur penulisan, tata bahasa, ejaan, dan format</td>
+                                <td class="border border-gray-300 px-4 py-3">
+                                    <div class="space-y-2 text-xs">
+                                        <p><span class="font-bold text-green-600">4:</span> Struktur sangat rapi, bahasa ilmiah, sesuai PUEBI.</p>
+                                        <p><span class="font-bold text-blue-600">3:</span> Cukup rapi, bahasa baik.</p>
+                                        <p><span class="font-bold text-yellow-600">2:</span> Ada beberapa kesalahan format/ejaan.</p>
+                                        <p><span class="font-bold text-red-600">1:</span> Banyak kesalahan dan tidak sistematis.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 px-4 py-3 text-center font-semibold">8</td>
+                                <td class="border border-gray-300 px-4 py-3 font-semibold text-green-700">Orisinalitas dan Kreativitas</td>
+                                <td class="border border-gray-300 px-4 py-3">Keaslian ide, inovasi, dan kontribusi terhadap ilmu/masyarakat</td>
+                                <td class="border border-gray-300 px-4 py-3">
+                                    <div class="space-y-2 text-xs">
+                                        <p><span class="font-bold text-green-600">4:</span> Ide orisinal, sangat inovatif, dan bermanfaat.</p>
+                                        <p><span class="font-bold text-blue-600">3:</span> Ide cukup baru dan bermanfaat.</p>
+                                        <p><span class="font-bold text-yellow-600">2:</span> Ide kurang baru atau meniru sebagian.</p>
+                                        <p><span class="font-bold text-red-600">1:</span> Tidak ada unsur orisinalitas.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Perhitungan Nilai -->
+                <div class="mt-8 grid md:grid-cols-2 gap-6">
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-6">
+                        <h4 class="text-lg font-bold text-green-800 mb-4">Total Skor Akhir</h4>
+                        <div class="bg-white p-4 rounded border text-center">
+                            <p class="text-sm font-semibold text-gray-800 mb-2">Rumus Perhitungan:</p>
+                            <p class="text-lg font-bold text-green-600">Nilai Akhir = (Total Skor didapat / 32) × 100</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                        <h4 class="text-lg font-bold text-yellow-800 mb-4">Keterangan Skor</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex items-center space-x-3">
+                                <span class="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-bold">4</span>
+                                <span class="text-gray-700">Sangat Baik</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">3</span>
+                                <span class="text-gray-700">Baik</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="w-6 h-6 bg-yellow-600 text-white rounded-full flex items-center justify-center text-xs font-bold">2</span>
+                                <span class="text-gray-700">Cukup</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center text-xs font-bold">1</span>
+                                <span class="text-gray-700">Kurang</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kategori Nilai Akhir -->
+                <div class="mt-6 bg-gray-50 border border-gray-200 rounded-lg p-6">
+                    <h4 class="text-lg font-bold text-gray-800 mb-4 text-center">Kategori Nilai Akhir</h4>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="bg-green-100 border border-green-300 rounded-lg p-4 text-center">
+                            <p class="font-bold text-green-800 text-lg">90–100</p>
+                            <p class="text-sm text-green-700">Sangat Baik</p>
+                        </div>
+                        <div class="bg-blue-100 border border-blue-300 rounded-lg p-4 text-center">
+                            <p class="font-bold text-blue-800 text-lg">71–89</p>
+                            <p class="text-sm text-blue-700">Baik</p>
+                        </div>
+                        <div class="bg-yellow-100 border border-yellow-300 rounded-lg p-4 text-center">
+                            <p class="font-bold text-yellow-800 text-lg">56–70</p>
+                            <p class="text-sm text-yellow-700">Cukup</p>
+                        </div>
+                        <div class="bg-red-100 border border-red-300 rounded-lg p-4 text-center">
+                            <p class="font-bold text-red-800 text-lg">&lt;56</p>
+                            <p class="text-sm text-red-700">Kurang</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="rubrik-presentasi" class="content-section">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">RUBRIK PENILAIAN PRESENTASI KARYA TULIS ILMIAH</h2>
+                <h3 class="text-xl font-semibold text-green-600 mb-8 text-center">SMA KRISTEN SUNODIA</h3>
+                
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse border border-gray-300 text-sm">
+                        <thead>
+                            <tr class="bg-blue-600 text-white">
+                                <th class="border border-gray-300 px-4 py-3 text-center font-semibold">No.</th>
+                                <th class="border border-gray-300 px-4 py-3 text-center font-semibold">Aspek Penilaian</th>
+                                <th class="border border-gray-300 px-4 py-3 text-center font-semibold">Kriteria Penilaian</th>
+                                <th class="border border-gray-300 px-4 py-3 text-center font-semibold">Indikator Penilaian (Skor 1–4)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 px-4 py-3 text-center font-semibold">1</td>
+                                <td class="border border-gray-300 px-4 py-3 font-semibold text-blue-700">Penguasaan Materi</td>
+                                <td class="border border-gray-300 px-4 py-3">Tingkat pemahaman terhadap isi karya tulis (konsep, data, hasil, dan kesimpulan)</td>
+                                <td class="border border-gray-300 px-4 py-3">
+                                    <div class="space-y-2 text-xs">
+                                        <p><span class="font-bold text-green-600">4:</span> Sangat menguasai materi, mampu menjawab semua pertanyaan dengan tepat dan logis.</p>
+                                        <p><span class="font-bold text-blue-600">3:</span> Menguasai sebagian besar materi, jawaban cukup tepat.</p>
+                                        <p><span class="font-bold text-yellow-600">2:</span> Pemahaman terbatas, jawaban kurang meyakinkan.</p>
+                                        <p><span class="font-bold text-red-600">1:</span> Tidak menguasai materi, banyak kesalahan konsep.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 px-4 py-3 text-center font-semibold">2</td>
+                                <td class="border border-gray-300 px-4 py-3 font-semibold text-blue-700">Penyampaian dan Kejelasan Presentasi</td>
+                                <td class="border border-gray-300 px-4 py-3">Cara penyampaian, kelancaran berbicara, kejelasan suara, dan penggunaan bahasa ilmiah</td>
+                                <td class="border border-gray-300 px-4 py-3">
+                                    <div class="space-y-2 text-xs">
+                                        <p><span class="font-bold text-green-600">4:</span> Penyampaian sangat lancar, jelas, percaya diri, dan menggunakan bahasa ilmiah yang baik.</p>
+                                        <p><span class="font-bold text-blue-600">3:</span> Penyampaian cukup lancar dan jelas.</p>
+                                        <p><span class="font-bold text-yellow-600">2:</span> Penyampaian kurang lancar, suara tidak jelas.</p>
+                                        <p><span class="font-bold text-red-600">1:</span> Penyampaian tidak lancar dan tidak terstruktur.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 px-4 py-3 text-center font-semibold">3</td>
+                                <td class="border border-gray-300 px-4 py-3 font-semibold text-blue-700">Struktur dan Sistematika Presentasi</td>
+                                <td class="border border-gray-300 px-4 py-3">Urutan logis dari pendahuluan, metode, hasil, hingga kesimpulan</td>
+                                <td class="border border-gray-300 px-4 py-3">
+                                    <div class="space-y-2 text-xs">
+                                        <p><span class="font-bold text-green-600">4:</span> Struktur sangat teratur dan logis, alur mudah diikuti.</p>
+                                        <p><span class="font-bold text-blue-600">3:</span> Struktur cukup jelas dan berurutan.</p>
+                                        <p><span class="font-bold text-yellow-600">2:</span> Struktur agak acak dan kurang terarah.</p>
+                                        <p><span class="font-bold text-red-600">1:</span> Struktur tidak jelas dan membingungkan.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 px-4 py-3 text-center font-semibold">4</td>
+                                <td class="border border-gray-300 px-4 py-3 font-semibold text-blue-700">Tampilan Media Presentasi</td>
+                                <td class="border border-gray-300 px-4 py-3">Kualitas slide (PowerPoint/Canva, dll) dari segi estetika, kerapian, dan keterbacaan</td>
+                                <td class="border border-gray-300 px-4 py-3">
+                                    <div class="space-y-2 text-xs">
+                                        <p><span class="font-bold text-green-600">4:</span> Desain menarik, rapi, konsisten, dan mudah dibaca.</p>
+                                        <p><span class="font-bold text-blue-600">3:</span> Desain cukup menarik dan terbaca dengan baik.</p>
+                                        <p><span class="font-bold text-yellow-600">2:</span> Desain kurang menarik, terlalu banyak teks/gambar.</p>
+                                        <p><span class="font-bold text-red-600">1:</span> Desain berantakan atau sulit dibaca.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="border border-gray-300 px-4 py-3 text-center font-semibold">5</td>
+                                <td class="border border-gray-300 px-4 py-3 font-semibold text-blue-700">Kemampuan Menjawab Pertanyaan</td>
+                                <td class="border border-gray-300 px-4 py-3">Ketepatan, logika, dan ketenangan dalam menjawab pertanyaan juri</td>
+                                <td class="border border-gray-300 px-4 py-3">
+                                    <div class="space-y-2 text-xs">
+                                        <p><span class="font-bold text-green-600">4:</span> Jawaban sangat tepat, logis, dan disampaikan dengan percaya diri.</p>
+                                        <p><span class="font-bold text-blue-600">3:</span> Jawaban cukup tepat dan jelas.</p>
+                                        <p><span class="font-bold text-yellow-600">2:</span> Jawaban kurang tepat atau kurang yakin.</p>
+                                        <p><span class="font-bold text-red-600">1:</span> Tidak dapat menjawab atau jawaban tidak relevan.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Perhitungan Nilai -->
+                <div class="mt-8 grid md:grid-cols-2 gap-6">
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                        <h4 class="text-lg font-bold text-blue-800 mb-4">Total Skor Akhir</h4>
+                        <div class="bg-white p-4 rounded border text-center">
+                            <p class="text-sm font-semibold text-gray-800 mb-2">Rumus Perhitungan:</p>
+                            <p class="text-lg font-bold text-blue-600">Nilai Akhir = (Total Skor didapat / 20) × 100</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                        <h4 class="text-lg font-bold text-yellow-800 mb-4">Keterangan Skor</h4>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex items-center space-x-3">
+                                <span class="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-bold">4</span>
+                                <span class="text-gray-700">Sangat Baik</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">3</span>
+                                <span class="text-gray-700">Baik</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="w-6 h-6 bg-yellow-600 text-white rounded-full flex items-center justify-center text-xs font-bold">2</span>
+                                <span class="text-gray-700">Cukup</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <span class="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center text-xs font-bold">1</span>
+                                <span class="text-gray-700">Kurang</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kategori Nilai Akhir -->
+                <div class="mt-6 bg-gray-50 border border-gray-200 rounded-lg p-6">
+                    <h4 class="text-lg font-bold text-gray-800 mb-4 text-center">Kategori Nilai Akhir</h4>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="bg-green-100 border border-green-300 rounded-lg p-4 text-center">
+                            <p class="font-bold text-green-800 text-lg">90–100</p>
+                            <p class="text-sm text-green-700">Sangat Baik</p>
+                        </div>
+                        <div class="bg-blue-100 border border-blue-300 rounded-lg p-4 text-center">
+                            <p class="font-bold text-blue-800 text-lg">71–89</p>
+                            <p class="text-sm text-blue-700">Baik</p>
+                        </div>
+                        <div class="bg-yellow-100 border border-yellow-300 rounded-lg p-4 text-center">
+                            <p class="font-bold text-yellow-800 text-lg">56–70</p>
+                            <p class="text-sm text-yellow-700">Cukup</p>
+                        </div>
+                        <div class="bg-red-100 border border-red-300 rounded-lg p-4 text-center">
+                            <p class="font-bold text-red-800 text-lg">&lt;56</p>
+                            <p class="text-sm text-red-700">Kurang</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="bidang-kajian" class="content-section">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">BIDANG KAJIAN KARYA TULIS ILMIAH (KTI)</h2>
+                <h3 class="text-xl font-semibold text-green-600 mb-8 text-center">SMA KRISTEN SUNODIA</h3>
+                
+                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-8">
+                    <p class="text-lg font-semibold text-gray-800 text-center">Setiap murid akan mendapatkan kesempatan mengundi pilihan Bidang Kajian KTI</p>
+                </div>
+                
+                <div class="mb-8">
+                    <h4 class="text-xl font-bold text-gray-800 mb-6">Bidang Kajian KTI meliputi:</h4>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                            <div class="flex items-center space-x-3">
+                                <span class="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm">1</span>
+                                <p class="font-semibold text-gray-800">Ilmu Pengetahuan Sosial & Humaniora</p>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                            <div class="flex items-center space-x-3">
+                                <span class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">2</span>
+                                <p class="font-semibold text-gray-800">Ilmu Pengetahuan Alam (IPA) & Lingkungan</p>
+                            </div>
+                        </div>
+                        <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                            <div class="flex items-center space-x-3">
+                                <span class="w-8 h-8 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-sm">3</span>
+                                <p class="font-semibold text-gray-800">Olahraga & Kesehatan</p>
+                            </div>
+                        </div>
+                        <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
+                            <div class="flex items-center space-x-3">
+                                <span class="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-sm">4</span>
+                                <p class="font-semibold text-gray-800">Seni, Budaya, & Kreatifitas</p>
+                            </div>
+                        </div>
+                        <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                            <div class="flex items-center space-x-3">
+                                <span class="w-8 h-8 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold text-sm">5</span>
+                                <p class="font-semibold text-gray-800">Bahasa, Sastra, & Media Komunikasi</p>
+                            </div>
+                        </div>
+                        <div class="bg-indigo-50 border border-indigo-200 rounded-lg p-4">
+                            <div class="flex items-center space-x-3">
+                                <span class="w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-sm">6</span>
+                                <p class="font-semibold text-gray-800">Ilmu Pengetahuan Dan Teknologi (IPTEK) & Rekayasa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-8">
+                    <h4 class="text-xl font-bold text-gray-800 mb-6">Contoh Sub Bidang dan Topik diantaranya sebagai berikut:</h4>
+                    
+                    <!-- 1. ILMU PENGETAHUAN SOSIAL & HUMANIORA -->
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-6">
+                        <h5 class="text-lg font-bold text-green-800 mb-4">1. ILMU PENGETAHUAN SOSIAL & HUMANIORA</h5>
+                        <p class="text-gray-700 mb-4 italic">Mengkaji interaksi manusia, masyarakat, dan sistem sosial.</p>
+                        <h6 class="font-semibold text-gray-800 mb-3">Sub-Bidang dan Contoh Topik:</h6>
+                        <div class="space-y-3 text-sm">
+                            <div class="bg-white p-4 rounded border">
+                                <p class="font-semibold text-green-700 mb-2">• Sosiologi & Psikologi:</p>
+                                <p class="text-gray-700">"Dampak Media Sosial TikTok terhadap Pembentukan Identitas Remaja di Kota [Nama Kota]"</p>
+                            </div>
+                            <div class="bg-white p-4 rounded border">
+                                <p class="font-semibold text-green-700 mb-2">• Ekonomi & Kewirausahaan:</p>
+                                <p class="text-gray-700">"Analisis Potensi Pasar Keripik Pisang sebagai Produk Unggulan Desa [Nama Desa]"</p>
+                            </div>
+                            <div class="bg-white p-4 rounded border">
+                                <p class="font-semibold text-green-700 mb-2">• Geografi & Lingkungan:</p>
+                                <p class="text-gray-700">"Pemetaan Daerah Rawan Banjir Rob di Pesisir [Nama Daerah] Menggunakan SIG Sederhana"</p>
+                            </div>
+                            <div class="bg-white p-4 rounded border">
+                                <p class="font-semibold text-green-700 mb-2">• Sejarah & Budaya:</p>
+                                <p class="text-gray-700">"Revitalisasi Ritual [Nama Ritual] sebagai Upaya Pelestarian Budaya Lokal"</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 2. ILMU PENGETAHUAN ALAM (IPA) & LINGKUNGAN -->
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                        <h5 class="text-lg font-bold text-blue-800 mb-4">2. ILMU PENGETAHUAN ALAM (IPA) & LINGKUNGAN</h5>
+                        <p class="text-gray-700 mb-4 italic">Fokus pada eksperimen untuk memahami fenomena alam, makhluk hidup, dan lingkungan.</p>
+                        <h6 class="font-semibold text-gray-800 mb-3">Sub-Bidang dan Contoh Topik:</h6>
+                        <div class="space-y-3 text-sm">
+                            <div class="bg-white p-4 rounded border">
+                                <p class="font-semibold text-blue-700 mb-2">• Biologi & Kesehatan:</p>
+                                <p class="text-gray-700">"Uji Efektivitas Ekstrak Biji Pepaya dalam Menghambat Pertumbuhan Bakteri Staphylococcus aureus"</p>
+                            </div>
+                            <div class="bg-white p-4 rounded border">
+                                <p class="font-semibold text-blue-700 mb-2">• Kimia & Material:</p>
+                                <p class="text-gray-700">"Pemanfaatan Arang Aktif dari Tempurung Kelapa sebagai Adsorben Penjernih Air Sumur"</p>
+                            </div>
+                            <div class="bg-white p-4 rounded border">
+                                <p class="font-semibold text-blue-700 mb-2">• Fisika & Energi:</p>
+                                <p class="text-gray-700">"Rancang Bangun Sistem Peringatan Dini Longsor Sederhana Berbasis Arduino"</p>
+                            </div>
+                            <div class="bg-white p-4 rounded border">
+                                <p class="font-semibold text-blue-700 mb-2">• Lingkungan:</p>
+                                <p class="text-gray-700">"Fitoremediasi Tanah Tercemar Logam Berat Menggunakan Tanaman Kangkung Air"</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 3. OLAHRAGA & KESEHATAN -->
+                    <div class="bg-red-50 border border-red-200 rounded-lg p-6">
+                        <h5 class="text-lg font-bold text-red-800 mb-4">3. OLAHRAGA & KESEHATAN</h5>
+                        <p class="text-gray-700 mb-4 italic">Mengkaji aspek fisiologis, psikologis, sosial, dan kinerja dalam aktivitas fisik serta kesehatan holistik.</p>
+                        <h6 class="font-semibold text-gray-800 mb-3">Sub-Bidang dan Contoh Topik:</h6>
+                        <div class="space-y-3 text-sm">
+                            <div class="bg-white p-4 rounded border">
+                                <p class="font-semibold text-red-700 mb-2">• Fisiologi Olahraga & Kinerja:</p>
+                                <p class="text-gray-700">"Pengaruh Latihan High-Intensity Interval Training (HIIT) terhadap Peningkatan VO2Max pada Atlet Futsal Sekolah", "Perbandingan Tingkat Daya Tahan Kardiorespirasi antara Peserta Ekstrakurikuler Futsal dan Basket".</p>
+                            </div>
+                            <div class="bg-white p-4 rounded border">
+                                <p class="font-semibold text-red-700 mb-2">• Psikologi Olahraga:</p>
+                                <p class="text-gray-700">"Hubungan antara Motivasi Berprestasi dan Kecemasan Atlet dalam Menghadapi Pertandingan", "Efektivitas Teknik Visualisasi untuk Meningkatkan Akurasi Free Throw dalam Bola Basket".</p>
+                            </div>
+                            <div class="bg-white p-4 rounded border">
+                                <p class="font-semibold text-red-700 mb-2">• Gizi & Suplementasi:</p>
+                                <p class="text-gray-700">"Analisis Asupan Gizi dan Cairan Atlet di Masa Latihan dan Pertandingan", "Potensi Jus Bit (Beta vulgaris) sebagai Minuman Ergogenik untuk Meningkatkan Daya Tahan".</p>
+                            </div>
+                            <div class="bg-white p-4 rounded border">
+                                <p class="font-semibold text-red-700 mb-2">• Kesehatan Mental & Gaya Hidup:</p>
+                                <p class="text-gray-700">"Hubungan antara Durasi Penggunaan Gawai dan Kualitas Tidur pada Remaja SMA", "Efektivitas Senam Yoga dalam Menurunkan Tingkat Stres Akademik Siswa Kelas XII".</p>
+                            </div>
+                            <div class="bg-white p-4 rounded border">
+                                <p class="font-semibold text-red-700 mb-2">• Teknologi & Alat Olahraga:</p>
+                                <p class="text-gray-700">"Rancang Bangun Alat Ukur Kecepatan dan Akurasi Tendangan dalam Sepak Bola Berbasis Sensor Ultrasonik", "Inovasi Matras Latihan Senam Lantai dari Bahan Daur Ulang Karet Ban".</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 4. SENI, BUDAYA, & KREATIFITAS -->
+                    <div class="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                        <h5 class="text-lg font-bold text-purple-800 mb-4">4. SENI, BUDAYA, & KREATIFITAS</h5>
+                        <p class="text-gray-700 mb-4 italic">Mengeksplorasi aspek estetika, budaya, dan nilai-nilai kemanusiaan.</p>
+                        <h6 class="font-semibold text-gray-800 mb-3">Sub-Bidang dan Contoh Topik:</h6>
+                        <div class="space-y-3 text-sm">
+                            <div class="bg-white p-4 rounded border">
+                                <p class="font-semibold text-purple-700 mb-2">• Seni Rupa & Desain:</p>
+                                <p class="text-gray-700">"Eksplorasi Motif Batik [Nama Daerah] dalam Desain Kaos Distro"</p>
+                            </div>
+                            <div class="bg-white p-4 rounded border">
+                                <p class="font-semibold text-purple-700 mb-2">• Seni Musik & Pertunjukan:</p>
+                                <p class="text-gray-700">"Analisis Nilai-Nilai Pendidikan Karakter dalam Lirik Lagu Album [Nama Album]"</p>
+                            </div>
+                            <div class="bg-white p-4 rounded border">
+                                <p class="font-semibold text-purple-700 mb-2">• Budaya & Filantropi:</p>
+                                <p class="text-gray-700">"Peran Komunitas [Nama Komunitas] dalam Memberikan Pendampingan Belajar Gratis"</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 5. BAHASA, SASTRA, & MEDIA KOMUNIKASI -->
+                    <div class="bg-orange-50 border border-orange-200 rounded-lg p-6">
+                        <h5 class="text-lg font-bold text-orange-800 mb-4">5. BAHASA, SASTRA, & MEDIA KOMUNIKASI</h5>
+                        <p class="text-gray-700 mb-4 italic">Mengkaji struktur bahasa, karya sastra, dan dinamika media.</p>
+                        <h6 class="font-semibold text-gray-800 mb-3">Sub-Bidang dan Contoh Topik:</h6>
+                        <div class="space-y-3 text-sm">
+                            <div class="bg-white p-4 rounded border">
+                                <p class="font-semibold text-orange-700 mb-2">• Linguistik:</p>
+                                <p class="text-gray-700">"Analisis Kesalahan Berbahasa Indonesia dalam Caption Instagram"</p>
+                            </div>
+                            <div class="bg-white p-4 rounded border">
+                                <p class="font-semibold text-orange-700 mb-2">• Sastra:</p>
+                                <p class="text-gray-700">"Representasi Kekuatan Perempuan dalam Novel [Judul Novel]"</p>
+                            </div>
+                            <div class="bg-white p-4 rounded border">
+                                <p class="font-semibold text-orange-700 mb-2">• Media & Komunikasi:</p>
+                                <p class="text-gray-700">"Strategi Framing Pemberitaan [Isu Tertentu] pada Media Online [Media A] dan [Media B]"</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 6. ILMU PENGETAHUAN DAN TEKNOLOGI (IPTEK) & REKAYASA -->
+                    <div class="bg-indigo-50 border border-indigo-200 rounded-lg p-6">
+                        <h5 class="text-lg font-bold text-indigo-800 mb-4">6. ILMU PENGETAHUAN DAN TEKNOLOGI (IPTEK) & REKAYASA</h5>
+                        <p class="text-gray-700 mb-4 italic">Menekankan pada perancangan dan pembuatan produk/teknologi.</p>
+                        <h6 class="font-semibold text-gray-800 mb-3">Sub-Bidang dan Contoh Topik:</h6>
+                        <div class="space-y-3 text-sm">
+                            <div class="bg-white p-4 rounded border">
+                                <p class="font-semibold text-indigo-700 mb-2">• Rekayasa Perangkat Lunak:</p>
+                                <p class="text-gray-700">"Perancangan Aplikasi 'Jelajah Budaya' Berbasis Android"</p>
+                            </div>
+                            <div class="bg-white p-4 rounded border">
+                                <p class="font-semibold text-indigo-700 mb-2">• Rekayasa Hardware:</p>
+                                <p class="text-gray-700">"Rancang Bangun Robot Pemadam Api Sederhana"</p>
+                            </div>
+                            <div class="bg-white p-4 rounded border">
+                                <p class="font-semibold text-indigo-700 mb-2">• Teknologi Tepat Guna:</p>
+                                <p class="text-gray-700">"Alat Pencacah Sampah Organik Portabel untuk Program Zero Waste di Sekolah"</p>
+                            </div>
+                            <div class="bg-white p-4 rounded border">
+                                <p class="font-semibold text-indigo-700 mb-2">• Desain Web / Portal:</p>
+                                <p class="text-gray-700">"Perancangan Website / Portal menggunakan HTML Programming"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="format-bimbingan" class="content-section">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">KARTU BIMBINGAN / KONSULTASI KARYA TULIS ILMIAH</h2>
+                <h3 class="text-xl font-semibold text-green-600 mb-8 text-center">SMA KRISTEN SUNODIA</h3>
+                
+                <!-- Section A: Identitas Murid -->
+                <div class="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
+                    <h4 class="text-lg font-bold text-green-800 mb-4">A. IDENTITAS MURID</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <label class="w-48 text-sm font-semibold text-gray-700">Nama Murid</label>
+                            <span class="text-gray-600 mr-2">:</span>
+                            <div class="flex-1 border-b border-gray-300 pb-1">
+                                <span class="text-gray-400 text-sm">.................................................................</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <label class="w-48 text-sm font-semibold text-gray-700">NIS / NISN</label>
+                            <span class="text-gray-600 mr-2">:</span>
+                            <div class="flex-1 border-b border-gray-300 pb-1">
+                                <span class="text-gray-400 text-sm">.................................................................</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <label class="w-48 text-sm font-semibold text-gray-700">Kelas / Jurusan</label>
+                            <span class="text-gray-600 mr-2">:</span>
+                            <div class="flex-1 border-b border-gray-300 pb-1">
+                                <span class="text-gray-400 text-sm">.................................................................</span>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <label class="w-48 text-sm font-semibold text-gray-700 pt-1">Judul Karya Tulis Ilmiah</label>
+                            <span class="text-gray-600 mr-2 pt-1">:</span>
+                            <div class="flex-1">
+                                <div class="border-b border-gray-300 pb-1 mb-2">
+                                    <span class="text-gray-400 text-sm">.............................................................................................................................................</span>
+                                </div>
+                                <div class="border-b border-gray-300 pb-1">
+                                    <span class="text-gray-400 text-sm">.............................................................................................................................................</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Section B: Identitas Pembimbing -->
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+                    <h4 class="text-lg font-bold text-blue-800 mb-4">B. IDENTITAS PEMBIMBING</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <label class="w-48 text-sm font-semibold text-gray-700">Pembimbing I</label>
+                            <span class="text-gray-600 mr-2">:</span>
+                            <div class="flex-1 border-b border-gray-300 pb-1">
+                                <span class="text-gray-400 text-sm">.................................................................</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <label class="w-48 text-sm font-semibold text-gray-700">Pembimbing II</label>
+                            <span class="text-gray-600 mr-2">:</span>
+                            <div class="flex-1 border-b border-gray-300 pb-1">
+                                <span class="text-gray-400 text-sm">.................................................................</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Section C: Catatan Bimbingan -->
+                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-6">
+                    <h4 class="text-lg font-bold text-yellow-800 mb-4">C. CATATAN BIMBINGAN / KONSULTASI</h4>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse border border-gray-400 text-sm">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="border border-gray-400 px-3 py-3 text-center font-semibold w-12">No</th>
+                                    <th class="border border-gray-400 px-3 py-3 text-center font-semibold w-32">Hari/Tanggal Bimbingan</th>
+                                    <th class="border border-gray-400 px-3 py-3 text-center font-semibold">Materi Bimbingan</th>
+                                    <th class="border border-gray-400 px-3 py-3 text-center font-semibold">Tindak Lanjut / Revisi</th>
+                                    <th class="border border-gray-400 px-3 py-3 text-center font-semibold w-24">Tanda Tangan Pembimbing I</th>
+                                    <th class="border border-gray-400 px-3 py-3 text-center font-semibold w-24">Tanda Tangan Pembimbing II</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Row 1 -->
+                                <tr>
+                                    <td class="border border-gray-400 px-3 py-8 text-center">1</td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                </tr>
+                                <!-- Row 2 -->
+                                <tr>
+                                    <td class="border border-gray-400 px-3 py-8 text-center">2</td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                </tr>
+                                <!-- Row 3 -->
+                                <tr>
+                                    <td class="border border-gray-400 px-3 py-8 text-center">3</td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                </tr>
+                                <!-- Row 4 -->
+                                <tr>
+                                    <td class="border border-gray-400 px-3 py-8 text-center">4</td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                </tr>
+                                <!-- Row 5 -->
+                                <tr>
+                                    <td class="border border-gray-400 px-3 py-8 text-center">5</td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                </tr>
+                                <!-- Row 6 -->
+                                <tr>
+                                    <td class="border border-gray-400 px-3 py-8 text-center">6</td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                </tr>
+                                <!-- Row 7 -->
+                                <tr>
+                                    <td class="border border-gray-400 px-3 py-8 text-center">7</td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                </tr>
+                                <!-- Row 8 -->
+                                <tr>
+                                    <td class="border border-gray-400 px-3 py-8 text-center">8</td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                </tr>
+                                <!-- Row 9 -->
+                                <tr>
+                                    <td class="border border-gray-400 px-3 py-8 text-center">9</td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                </tr>
+                                <!-- Row 10 -->
+                                <tr>
+                                    <td class="border border-gray-400 px-3 py-8 text-center">10</td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                    <td class="border border-gray-400 px-3 py-8"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Catatan Guru Pembimbing -->
+                <div class="bg-gray-50 border border-gray-200 rounded-lg p-6">
+                    <h4 class="text-lg font-bold text-gray-800 mb-4">Catatan Guru Pembimbing terkait kesiapan mengikuti Presentasi KTI:</h4>
+                    <div class="bg-white border border-gray-300 rounded p-4 min-h-32">
+                        <div class="space-y-2">
+                            <div class="border-b border-gray-200 pb-1">
+                                <span class="text-gray-400 text-sm">………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………</span>
+                            </div>
+                            <div class="border-b border-gray-200 pb-1">
+                                <span class="text-gray-400 text-sm">………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………</span>
+                            </div>
+                            <div class="border-b border-gray-200 pb-1">
+                                <span class="text-gray-400 text-sm">………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………</span>
+                            </div>
+                            <div class="border-b border-gray-200 pb-1">
+                                <span class="text-gray-400 text-sm">………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………………</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Petunjuk Penggunaan -->
+                <div class="bg-green-50 border border-green-200 rounded-lg p-6 mt-6">
+                    <h4 class="text-lg font-bold text-green-800 mb-4">📋 Petunjuk Penggunaan Kartu Bimbingan</h4>
+                    <div class="space-y-2 text-sm text-gray-700">
+                        <p class="flex items-start space-x-2">
+                            <span class="text-green-600 font-bold">1.</span>
+                            <span>Kartu bimbingan ini wajib dibawa setiap kali melakukan konsultasi dengan guru pembimbing.</span>
+                        </p>
+                        <p class="flex items-start space-x-2">
+                            <span class="text-green-600 font-bold">2.</span>
+                            <span>Setiap sesi bimbingan harus dicatat dengan lengkap dan ditandatangani oleh pembimbing.</span>
+                        </p>
+                        <p class="flex items-start space-x-2">
+                            <span class="text-green-600 font-bold">3.</span>
+                            <span>Minimal 8 kali bimbingan harus terpenuhi sebelum diizinkan mengikuti presentasi KTI.</span>
+                        </p>
+                        <p class="flex items-start space-x-2">
+                            <span class="text-green-600 font-bold">4.</span>
+                            <span>Kartu yang telah lengkap diserahkan kepada koordinator KTI sebelum jadwal presentasi.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="helpdesk-kti" class="content-section">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Helpdesk KTI</h2>
+                <p class="text-gray-600">Informasi helpdesk khusus KTI akan ditambahkan di sini.</p>
+            </div>
+        </div>
+
+        <div id="preview-download" class="content-section">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">PREVIEW & DOWNLOAD FILE</h2>
+                <h3 class="text-xl font-semibold text-green-600 mb-8 text-center">SMA KRISTEN SUNODIA</h3>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Panduan Penulisan KTI -->
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-16 h-16 bg-green-500 rounded-lg flex items-center justify-center">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800">Panduan Penulisan KTI</h4>
+                                <p class="text-sm text-gray-600">Panduan lengkap penulisan Karya Tulis Ilmiah</p>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <button onclick="copyToClipboard('https://drive.google.com/drive/folders/1VJs_FHiWyJNgnP1jstgKeMrh1aW2YmZ2', this)" class="flex items-center justify-center w-full bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-4 rounded-lg transition-colors">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                </svg>
+                                Salin Link Google Drive
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Rubrik Penilaian Naskah KTI -->
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-16 h-16 bg-blue-500 rounded-lg flex items-center justify-center">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800">Rubrik Penilaian Naskah KTI</h4>
+                                <p class="text-sm text-gray-600">Kriteria penilaian naskah Karya Tulis Ilmiah</p>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <button onclick="copyToClipboard('https://drive.google.com/drive/folders/1HT7UrGd2dSpEIHZZT7TdjEFvYO9prnMp', this)" class="flex items-center justify-center w-full bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-4 rounded-lg transition-colors">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                </svg>
+                                Salin Link Google Drive
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Rubrik Penilaian Presentasi KTI -->
+                    <div class="bg-purple-50 border border-purple-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-16 h-16 bg-purple-500 rounded-lg flex items-center justify-center">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m0 0V1a1 1 0 011-1h2a1 1 0 011 1v18a1 1 0 01-1 1H4a1 1 0 01-1-1V1a1 1 0 011-1h2a1 1 0 011 1v3m0 0h8m-8 0V1a1 1 0 00-1-1H4a1 1 0 00-1 1v18a1 1 0 001 1h16a1 1 0 001-1V1a1 1 0 00-1-1h-2a1 1 0 00-1 1v3"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800">Rubrik Penilaian Presentasi KTI</h4>
+                                <p class="text-sm text-gray-600">Kriteria penilaian presentasi Karya Tulis Ilmiah</p>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <button onclick="copyToClipboard('https://drive.google.com/drive/folders/1E6j12CkDMSigZpg4jDrhjTI6xWk8opnf', this)" class="flex items-center justify-center w-full bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-4 rounded-lg transition-colors">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                </svg>
+                                Salin Link Google Drive
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Kartu Bimbingan/Konsultasi -->
+                    <div class="bg-orange-50 border border-orange-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-16 h-16 bg-orange-500 rounded-lg flex items-center justify-center">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-800">Kartu Bimbingan/Konsultasi</h4>
+                                <p class="text-sm text-gray-600">Format kartu bimbingan Karya Tulis Ilmiah</p>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <button onclick="copyToClipboard('https://drive.google.com/drive/folders/19vA0axTQnA4PaxuYXj449PD7wgBYZUSA', this)" class="flex items-center justify-center w-full bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-4 rounded-lg transition-colors">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                </svg>
+                                Salin Link Google Drive
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Informasi Tambahan -->
+                <div class="mt-8 bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                    <div class="flex items-start space-x-3">
+                        <svg class="w-6 h-6 text-yellow-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <div>
+                            <h4 class="text-lg font-semibold text-yellow-800 mb-2">Informasi Penting</h4>
+                            <div class="space-y-2 text-sm text-gray-700">
+                                <p>• Klik tombol "Salin Link Google Drive" untuk menyalin link ke clipboard</p>
+                                <p>• Setelah link tersalin, buka browser dan paste link untuk mengakses file</p>
+                                <p>• File-file tersedia dalam format PDF yang dapat diunduh dan dicetak</p>
+                                <p>• Jika mengalami kesulitan mengakses file, hubungi tim Helpdesk</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="helpdesk" class="content-section">
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">HELPDESK PORTAL KARYA TULIS ILMIAH</h2>
+                <h3 class="text-xl font-semibold text-green-600 mb-8 text-center">SMA KRISTEN SUNODIA</h3>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="custom-green-light p-6 rounded-lg">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-4">📞 Kontak Bantuan</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-3 p-3 bg-white rounded-lg border">
+                                <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800">WhatsApp</p>
+                                    <p class="text-sm text-gray-600">Miss Claris</p>
+                                    <a href="https://wa.me/6281350774188" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:text-green-700 text-sm font-medium">081350774188</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-3 p-3 bg-white rounded-lg border">
+                                <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800">WhatsApp</p>
+                                    <p class="text-sm text-gray-600">Miss Aprisa Nisa Amping</p>
+                                    <a href="https://wa.me/6282148841275" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:text-green-700 text-sm font-medium">082148841275</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-3 p-3 bg-white rounded-lg border">
+                                <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800">WhatsApp</p>
+                                    <p class="text-sm text-gray-600">Laose Danil</p>
+                                    <a href="https://wa.me/6282149612325" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:text-green-700 text-sm font-medium">0821 4961 2325</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-3 p-3 bg-white rounded-lg border">
+                                <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800">WhatsApp</p>
+                                    <p class="text-sm text-gray-600">Yunedi</p>
+                                    <a href="https://wa.me/6285347042022" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:text-green-700 text-sm font-medium">085347042022</a>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                    
+                    <div class="custom-yellow-light p-6 rounded-lg">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-4">❓ Pertanyaan yang Sering Diajukan (FAQ)</h3>
+                        <div class="space-y-4">
+                            <div class="bg-white p-4 rounded-lg border">
+                                <h4 class="font-semibold text-gray-800 mb-2">Berapa kali minimal harus bimbingan?</h4>
+                                <p class="text-sm text-gray-600">Minimal 8 kali bimbingan yang tercatat dalam kartu bimbingan dan ditandatangani oleh pembimbing.</p>
+                            </div>
+                            
+                            <div class="bg-white p-4 rounded-lg border">
+                                <h4 class="font-semibold text-gray-800 mb-2">Kapan deadline pengumpulan KTI?</h4>
+                                <p class="text-sm text-gray-600">Informasi deadline akan diumumkan melalui pengumuman resmi sekolah dan grup WhatsApp kelas.</p>
+                            </div>
+                            
+                            <div class="bg-white p-4 rounded-lg border">
+                                <h4 class="font-semibold text-gray-800 mb-2">Bagaimana format penulisan yang benar?</h4>
+                                <p class="text-sm text-gray-600">Silakan merujuk pada menu "Panduan Penulisan KTI" untuk format lengkap dan contoh penulisan.</p>
+                            </div>
+                            
+                            <div class="bg-white p-4 rounded-lg border">
+                                <h4 class="font-semibold text-gray-800 mb-2">Dimana bisa konsultasi langsung?</h4>
+                                <p class="text-sm text-gray-600">Konsultasi dapat dilakukan di ruang guru atau lokasi lain di sekolah yang sudah disepakati oleh guru dan murid.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="custom-green text-white mt-12">
+        <div class="container mx-auto px-6 py-8">
+            <div class="text-center">
+                <h3 class="text-lg font-semibold mb-2">SMA Kristen Sunodia Samarinda</h3>
+                <p class="text-green-100 text-sm mb-4">Portal Karya Tulis Ilmiah Tahun Pelajaran 2025/2026</p>
+                <p class="text-green-200 text-xs">© 2025 SMA Kristen Sunodia. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showContent(contentId) {
+            // Hide all content sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show selected content
+            const targetSection = document.getElementById(contentId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+                targetSection.classList.add('fade-in');
+                
+                // Remove fade-in class after animation
+                setTimeout(() => {
+                    targetSection.classList.remove('fade-in');
+                }, 500);
+            }
+            
+            // Close dropdown menus
+            const dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.remove('show');
+            });
+        }
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(dropdown => {
+                if (!dropdown.closest('.menu-item').contains(event.target)) {
+                    dropdown.classList.remove('show');
+                }
+            });
+        });
+
+        // Function to copy text to clipboard
+        function copyToClipboard(text, button) {
+            navigator.clipboard.writeText(text).then(function() {
+                // Change button text temporarily
+                const originalText = button.innerHTML;
+                button.innerHTML = `
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    Link Tersalin!
+                `;
+                button.classList.remove('bg-green-600', 'hover:bg-green-700');
+                button.classList.add('bg-blue-600');
+                
+                // Reset button after 2 seconds
+                setTimeout(function() {
+                    button.innerHTML = originalText;
+                    button.classList.remove('bg-blue-600');
+                    button.classList.add('bg-green-600', 'hover:bg-green-700');
+                }, 2000);
+            }).catch(function(err) {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                // Show success message
+                const originalText = button.innerHTML;
+                button.innerHTML = `
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    Link Tersalin!
+                `;
+                button.classList.remove('bg-green-600', 'hover:bg-green-700');
+                button.classList.add('bg-blue-600');
+                
+                setTimeout(function() {
+                    button.innerHTML = originalText;
+                    button.classList.remove('bg-blue-600');
+                    button.classList.add('bg-green-600', 'hover:bg-green-700');
+                }, 2000);
+            });
+        }
+
+        // Initialize - show beranda by default
+        document.addEventListener('DOMContentLoaded', function() {
+            showContent('beranda');
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98dcd0acf657ce4b',t:'MTc2MDMzNzMwOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
